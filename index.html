@@ -3,92 +3,127 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SUMAQ Marketing Agency · Portafolio</title>
-<meta name="description" content="Agencia de contenido para marcas que no quieren salir en cámara. Estrategia, contenido y resultados.">
+<title>SUMAQ Marketing Agency · Instagram que vende, sin salir en cámara</title>
+<meta name="description" content="Agencia de contenido para marcas que no quieren salir en cámara. Carruseles y Reels que te hacen descubrir, confiar y escribir por WhatsApp. Diagnóstico gratis de 20 minutos.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --linen:#F9E8D4; --tangelo:#D54C15; --choco:#663924; --botti:#8DB6C7;
-  --linen-2:#F2DDC3; --ink:#3d2415; --white:#fffaf3;
+  --linen-2:#F2DDC3; --white:#fffaf3; --deep:#3a2012;
   --display:"Quiche Display","Cormorant Garamond",Georgia,serif;
   --body:"Montserrat",system-ui,sans-serif;
+  --shadow:0 18px 44px rgba(102,57,36,.16);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--linen);color:var(--choco);font-family:var(--body);line-height:1.6;font-size:16px}
+body{background:var(--linen);color:var(--choco);font-family:var(--body);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
 .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.1;color:var(--choco)}
-h1{font-size:clamp(2.4rem,6vw,4.4rem)}
-h2{font-size:clamp(1.9rem,4vw,2.9rem);margin-bottom:12px}
-h3{font-size:1.5rem}
-.eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--tangelo);font-weight:600;margin-bottom:14px}
-.lead{max-width:640px;opacity:.88}
-section{padding:84px 0}
-.btn{display:inline-block;background:var(--tangelo);color:#fff;text-decoration:none;padding:14px 26px;border-radius:999px;font-weight:600;font-size:.92rem;letter-spacing:.03em;border:2px solid var(--tangelo);transition:transform .15s,background .15s}
-.btn:hover{transform:translateY(-2px);background:#b83f0f;border-color:#b83f0f}
-.btn.ghost{background:transparent;color:var(--choco);border-color:var(--choco)}
-.btn.ghost:hover{background:var(--choco);color:var(--linen);border-color:var(--choco)}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;color:var(--choco)}
+h1{font-size:clamp(2.5rem,6vw,4.5rem)}
+h2{font-size:clamp(2rem,4.2vw,3.1rem);margin-bottom:14px}
+h3{font-size:1.55rem}
+.eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--tangelo);font-weight:700;margin-bottom:14px}
+.lead{max-width:660px;opacity:.9;font-size:1.04rem}
+section{padding:92px 0}
+.center{text-align:center}.center .lead{margin:0 auto}
 
-/* nav */
-header{position:sticky;top:0;z-index:20;background:rgba(249,232,212,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(102,57,36,.14)}
-nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--tangelo);color:#fff;text-decoration:none;padding:16px 30px;border-radius:999px;font-weight:700;font-size:.95rem;letter-spacing:.03em;border:2px solid var(--tangelo);transition:transform .18s,box-shadow .18s,background .18s;box-shadow:0 10px 24px rgba(213,76,21,.3);cursor:pointer;font-family:var(--body)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 16px 30px rgba(213,76,21,.38);background:#b83f0f;border-color:#b83f0f}
+.btn.ghost{background:transparent;color:var(--choco);border-color:var(--choco);box-shadow:none}
+.btn.ghost:hover{background:var(--choco);color:var(--linen);border-color:var(--choco)}
+.micro{font-size:.8rem;opacity:.8;margin-top:12px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* header */
+header{position:sticky;top:0;z-index:30;background:rgba(249,232,212,.93);backdrop-filter:blur(8px);border-bottom:1px solid rgba(102,57,36,.14)}
+nav{display:flex;align-items:center;justify-content:space-between;height:70px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.brand img{height:40px;width:auto}
-.brand b{font-family:var(--display);font-size:1.7rem;font-weight:600;letter-spacing:.02em}
+.brand img{height:42px;width:auto}
+.brand b{font-family:var(--display);font-size:1.75rem;font-weight:600;letter-spacing:.02em}
 nav ul{display:flex;gap:26px;list-style:none;align-items:center}
 nav ul a{text-decoration:none;font-size:.84rem;font-weight:500;letter-spacing:.04em}
 nav ul a:hover{color:var(--tangelo)}
-.menu-btn{display:none;background:none;border:0;font-size:1.6rem;color:var(--choco);cursor:pointer}
+nav ul a.btn{padding:10px 20px;color:#fff;box-shadow:none}
+.menu-btn{display:none;background:none;border:0;font-size:1.7rem;color:var(--choco);cursor:pointer}
 
 /* hero */
-.hero{padding:70px 0 90px;background:
- radial-gradient(900px 400px at 85% 0%,rgba(141,182,199,.28),transparent 70%)}
-.hero .grid{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}
+.hero{padding:64px 0 96px;position:relative;overflow:hidden;background:
+  radial-gradient(800px 420px at 90% 0%,rgba(141,182,199,.35),transparent 70%),
+  radial-gradient(600px 400px at 0% 100%,rgba(213,76,21,.1),transparent 70%)}
+.hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
 .hero h1 em{font-style:normal;color:var(--tangelo)}
-.hero p{margin:22px 0 30px;max-width:520px;font-size:1.05rem}
-.hero .actions{display:flex;gap:14px;flex-wrap:wrap}
-.hero .art{display:flex;justify-content:center}
-.hero .art img{width:min(300px,70%);filter:drop-shadow(0 18px 28px rgba(102,57,36,.2))}
-.keywords{display:flex;gap:10px 22px;flex-wrap:wrap;margin-top:38px;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
-.keywords span::before{content:"•";color:var(--tangelo);margin-right:8px}
+.hero .sub{margin:22px 0 22px;max-width:540px;font-size:1.08rem}
+.ticks{list-style:none;display:grid;gap:9px;margin-bottom:30px;font-weight:500;font-size:.95rem}
+.ticks li::before{content:"✓";display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--tangelo);color:#fff;font-size:.72rem;margin-right:10px;font-weight:700}
+.actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 
-/* strip */
-.strip{background:var(--choco);color:var(--linen);padding:26px 0}
-.strip .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
-.strip strong{font-family:var(--display);font-size:1.8rem;display:block;color:#fff}
-.strip span{font-size:.85rem;opacity:.85}
+/* phone */
+.phone-wrap{display:flex;justify-content:center;position:relative}
+.phone-wrap::before{content:"";position:absolute;width:320px;height:320px;border-radius:50%;background:var(--botti);opacity:.35;filter:blur(2px);top:40px;right:10px}
+.phone{position:relative;width:min(300px,78vw);background:var(--deep);border-radius:38px;padding:11px;box-shadow:var(--shadow),0 0 0 2px rgba(255,255,255,.08) inset;transform:rotate(3deg)}
+.screen{background:var(--linen);border-radius:28px;overflow:hidden;padding:16px 14px 16px}
+.ph-top{display:flex;align-items:center;gap:12px}
+.ph-top img{width:46px;height:46px;border-radius:50%;background:var(--white);padding:6px;object-fit:contain}
+.ph-top b{font-size:.82rem;display:block;line-height:1.2}
+.ph-top span{font-size:.68rem;opacity:.75}
+.ph-bio{font-size:.7rem;margin:10px 0 12px;line-height:1.45}
+.ph-btn{background:var(--tangelo);color:#fff;text-align:center;border-radius:8px;font-size:.68rem;font-weight:700;padding:7px;margin-bottom:12px}
+.ph-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.ph-grid div{aspect-ratio:4/5;border-radius:6px;padding:7px;font-family:var(--display);font-size:.78rem;line-height:1.05;display:flex;align-items:flex-end;font-weight:600}
+.t1{background:var(--tangelo);color:#fff}.t2{background:var(--choco);color:var(--linen)}.t3{background:var(--botti);color:var(--choco)}
+.t4{background:var(--white);color:var(--choco)}.t5{background:var(--choco);color:var(--linen)}.t6{background:var(--tangelo);color:#fff}
+
+/* trust strip */
+.trust{background:var(--choco);color:var(--linen);padding:26px 0}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.trust div{text-align:center;font-size:.84rem}
+.trust strong{display:block;font-family:var(--display);font-size:1.45rem;color:#fff;line-height:1.1;margin-bottom:2px}
+
+/* pain */
+.pain{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:38px}
+.pain div{background:var(--white);border-radius:20px;padding:26px;border:1px solid rgba(102,57,36,.1)}
+.pain b{font-family:var(--display);font-size:1.35rem;display:block;margin-bottom:6px;color:var(--tangelo)}
+.pain p{font-size:.93rem}
+.turn{margin-top:34px;font-family:var(--display);font-size:clamp(1.5rem,3vw,2.1rem);text-align:center}
+.turn em{font-style:normal;color:var(--tangelo)}
 
 /* services */
 .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
-.card{background:var(--white);border-radius:22px;padding:30px;border:1px solid rgba(102,57,36,.1)}
+.card{background:var(--white);border-radius:22px;padding:30px;border:1px solid rgba(102,57,36,.1);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
 .card .n{font-family:var(--display);font-size:2.4rem;color:var(--tangelo);line-height:1}
 .card h3{margin:10px 0 8px}
-.card p{font-size:.93rem;opacity:.9}
+.card p{font-size:.93rem}
 .card ul{margin-top:14px;padding-left:18px;font-size:.88rem}
 
 /* portfolio */
-.notice{background:var(--white);border-left:5px solid var(--botti);border-radius:12px;padding:16px 20px;margin:26px 0 8px;font-size:.9rem;max-width:760px}
-.case{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center;margin-top:56px;padding-top:56px;border-top:1px solid rgba(102,57,36,.16)}
-.case:nth-of-type(even) .case-text{order:2}
-.tag{display:inline-block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;background:var(--botti);color:var(--choco);padding:5px 12px;border-radius:999px;margin-bottom:12px}
-.case h3{font-size:2rem;margin-bottom:6px}
+.alt{background:var(--linen-2)}
+.notice{background:var(--white);border-left:5px solid var(--botti);border-radius:12px;padding:16px 20px;margin:26px 0 8px;font-size:.9rem;max-width:780px}
+.case{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;margin-top:60px;padding-top:60px;border-top:1px solid rgba(102,57,36,.16)}
+.case:nth-of-type(odd) .case-text{order:2}
+.tag{display:inline-block;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;background:var(--choco);color:var(--linen);padding:6px 14px;border-radius:999px;margin-bottom:14px}
+.case h3{font-size:2.2rem;margin-bottom:4px}
 .sector{font-size:.85rem;opacity:.75;margin-bottom:16px}
 .case dl{display:grid;gap:14px;margin-top:10px}
-.case dt{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tangelo);font-weight:600}
+.case dt{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tangelo);font-weight:700}
 .case dd{font-size:.93rem}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
 .chips span{font-size:.76rem;border:1px solid rgba(102,57,36,.35);padding:4px 11px;border-radius:999px}
 .slides{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.slide{aspect-ratio:4/5;border-radius:16px;padding:16px;display:flex;flex-direction:column;justify-content:space-between;font-size:.72rem;position:relative;overflow:hidden;box-shadow:0 10px 24px rgba(102,57,36,.14)}
-.slide .k{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;opacity:.8;font-weight:600}
-.slide .t{font-family:var(--display);font-size:1.35rem;line-height:1.05;font-weight:600}
+.slide{aspect-ratio:4/5;border-radius:16px;padding:16px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;box-shadow:0 12px 26px rgba(102,57,36,.16);transition:transform .25s}
+.slide:hover{transform:translateY(-6px) rotate(-1deg)}
+.slide .k{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;opacity:.8;font-weight:700}
+.slide .t{font-family:var(--display);font-size:1.4rem;line-height:1.05;font-weight:600}
 .slide .f{font-size:.58rem;letter-spacing:.1em;opacity:.8}
 .slide .dot{position:absolute;right:14px;top:14px;width:12px;height:12px;border-radius:50%}
-/* paletas de marcas ficticias */
 .a1{background:#f6d9d0;color:#6b2d1d}.a1 .dot{background:#c2410c}
 .a2{background:#6b2d1d;color:#fbe9df}.a2 .dot{background:#f6d9d0}
 .a3{background:#c2410c;color:#fff4ec}.a3 .dot{background:#fff4ec}
@@ -98,50 +133,93 @@ nav ul a:hover{color:var(--tangelo)}
 .c1{background:#e4e0f0;color:#2b2650}.c1 .dot{background:#6a5fb5}
 .c2{background:#2b2650;color:#ece8fa}.c2 .dot{background:#e4e0f0}
 .c3{background:#6a5fb5;color:#f4f2ff}.c3 .dot{background:#f4f2ff}
+.case-cta{text-align:center;margin-top:56px}
 
 /* process */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
-.step{border-top:3px solid var(--tangelo);padding-top:16px}
-.step b{font-family:var(--display);font-size:1.5rem;display:block;margin-bottom:6px}
-.step p{font-size:.9rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.step{background:var(--white);border-radius:22px;padding:28px;position:relative;border:1px solid rgba(102,57,36,.1)}
+.step i{font-style:normal;font-family:var(--display);font-size:3.2rem;color:var(--tangelo);line-height:1;opacity:.9}
+.step b{font-family:var(--display);font-size:1.5rem;display:block;margin:6px 0}
+.step p{font-size:.92rem}
 
 /* pricing */
-.alt{background:var(--linen-2)}
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px;align-items:stretch}
-.plan{background:var(--white);border-radius:24px;padding:32px 28px;display:flex;flex-direction:column;border:1px solid rgba(102,57,36,.1)}
-.plan.pop{background:var(--choco);color:var(--linen);position:relative}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px;align-items:stretch}
+.plan{background:var(--white);border-radius:26px;padding:34px 28px;display:flex;flex-direction:column;border:1px solid rgba(102,57,36,.1);position:relative}
+.plan.pop{background:var(--choco);color:var(--linen);transform:scale(1.04);box-shadow:var(--shadow)}
 .plan.pop h3,.plan.pop .price{color:#fff}
-.plan.pop::before{content:"Más elegido";position:absolute;top:-13px;left:28px;background:var(--tangelo);color:#fff;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:5px 14px;border-radius:999px}
-.price{font-family:var(--display);font-size:2.6rem;color:var(--tangelo);margin:8px 0 2px}
+.plan.pop::before{content:"Más elegido";position:absolute;top:-14px;left:28px;background:var(--tangelo);color:#fff;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:6px 15px;border-radius:999px}
+.plan .for{font-size:.84rem;opacity:.85;margin-top:2px}
+.price{font-family:var(--display);font-size:2.8rem;color:var(--tangelo);margin:10px 0 2px;line-height:1}
 .price small{font-family:var(--body);font-size:.8rem;opacity:.75;font-weight:500}
+.hours{font-size:.78rem;background:rgba(213,76,21,.1);color:var(--tangelo);border-radius:8px;padding:6px 10px;margin-top:10px;font-weight:600}
+.plan.pop .hours{background:rgba(255,255,255,.12);color:#ffd9c7}
 .plan ul{list-style:none;margin:18px 0 26px;display:grid;gap:9px;font-size:.9rem;flex:1}
 .plan li::before{content:"✦ ";color:var(--tangelo)}
-.plan .btn{text-align:center}
+.plan .btn{justify-content:center}
 .plan.pop .btn.ghost{color:var(--linen);border-color:var(--linen)}
-.fine{font-size:.82rem;opacity:.8;margin-top:22px;max-width:760px}
+.fine{font-size:.82rem;opacity:.8;margin-top:26px;max-width:780px}
 
-/* cta + footer */
-.cta{background:var(--choco);color:var(--linen);text-align:center;border-radius:32px;padding:64px 24px}
+/* guarantees */
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:38px}
+.g4 div{background:var(--white);border-radius:20px;padding:24px;text-align:center;border:1px solid rgba(102,57,36,.1)}
+.g4 b{font-family:var(--display);font-size:1.3rem;display:block;margin:6px 0 4px}
+.g4 p{font-size:.86rem}
+.g4 .ic{font-size:1.7rem;color:var(--tangelo)}
+
+/* fit */
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:38px}
+.fit div{border-radius:22px;padding:30px}
+.fit .yes{background:var(--choco);color:var(--linen)}
+.fit .yes h3{color:#fff}
+.fit .no{background:var(--white);border:1px solid rgba(102,57,36,.14)}
+.fit ul{list-style:none;margin-top:14px;display:grid;gap:9px;font-size:.92rem}
+.fit .yes li::before{content:"✓ ";color:#ffb996;font-weight:700}
+.fit .no li::before{content:"✕ ";color:var(--tangelo);font-weight:700}
+
+/* faq */
+.faq{max-width:780px;margin:34px auto 0;display:grid;gap:12px}
+details{background:var(--white);border-radius:16px;padding:18px 22px;border:1px solid rgba(102,57,36,.12)}
+summary{cursor:pointer;font-weight:600;font-size:.98rem;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--tangelo);font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin-top:10px;font-size:.92rem;opacity:.92}
+
+/* cta */
+.cta{background:radial-gradient(600px 300px at 80% 0%,rgba(213,76,21,.35),transparent 70%),var(--choco);color:var(--linen);text-align:center;border-radius:34px;padding:72px 24px}
 .cta h2{color:#fff}
-.cta p{max-width:560px;margin:0 auto 26px;opacity:.9}
+.cta p{max-width:580px;margin:0 auto 28px;opacity:.92}
 .cta .eyebrow{color:var(--botti)}
-footer{padding:44px 0 36px;font-size:.84rem}
+.cta .btn{font-size:1.02rem;padding:18px 36px}
+.cta .micro{color:var(--linen)}
+footer{padding:46px 0 100px;font-size:.84rem}
 footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
-footer img{height:70px}
+footer img{height:72px}
 
-@media (max-width:860px){
-  section{padding:60px 0}
-  .hero .grid,.case{grid-template-columns:1fr}
-  .case:nth-of-type(even) .case-text{order:0}
-  .cards3,.plans{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr 1fr}
-  .strip .wrap{grid-template-columns:1fr}
+/* sticky cta + modal */
+.sticky{position:fixed;left:16px;right:16px;bottom:16px;z-index:40;display:none;justify-content:center;transform:translateY(120px);transition:transform .35s}
+.sticky.show{transform:none}
+.sticky .btn{width:100%;max-width:440px;justify-content:center;padding:15px 20px}
+.modal{position:fixed;inset:0;z-index:60;background:rgba(58,32,18,.62);display:none;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.modal .box{background:var(--linen);border-radius:26px;max-width:460px;padding:38px 32px;text-align:center;position:relative;box-shadow:var(--shadow)}
+.modal .x{position:absolute;right:16px;top:12px;background:none;border:0;font-size:1.6rem;color:var(--choco);cursor:pointer}
+.modal h3{font-size:2rem;margin-bottom:10px}
+.modal p{margin-bottom:22px;font-size:.95rem}
+
+@media (max-width:900px){
+  section{padding:64px 0}
+  .hero .grid,.case,.fit{grid-template-columns:1fr}
+  .case:nth-of-type(odd) .case-text{order:0}
+  .cards3,.plans,.pain,.steps{grid-template-columns:1fr}
+  .g4,.trust .wrap{grid-template-columns:1fr 1fr}
+  .plan.pop{transform:none}
   .menu-btn{display:block}
-  nav ul{display:none;position:absolute;left:0;right:0;top:68px;background:var(--linen);flex-direction:column;padding:20px;gap:16px;border-bottom:1px solid rgba(102,57,36,.14)}
+  nav ul{display:none;position:absolute;left:0;right:0;top:70px;background:var(--linen);flex-direction:column;padding:20px;gap:16px;border-bottom:1px solid rgba(102,57,36,.14)}
   nav ul.open{display:flex}
-  .hero .art{order:-1}
+  .phone-wrap{order:-1}.phone{transform:none}.phone-wrap::before{display:none}
   .slides{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:62%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}
   .slide{scroll-snap-align:start}
+  .sticky{display:flex}
 }
 </style>
 </head>
@@ -155,9 +233,9 @@ footer img{height:70px}
       <ul id="menu" onclick="this.classList.remove('open')">
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#portafolio">Portafolio</a></li>
-        <li><a href="#proceso">Proceso</a></li>
         <li><a href="#planes">Planes</a></li>
-        <li><a class="btn wa" href="#contacto" style="padding:10px 20px;color:#fff">Hablemos</a></li>
+        <li><a href="#faq">Preguntas</a></li>
+        <li><a class="btn wa" href="#contacto">Diagnóstico gratis</a></li>
       </ul>
     </nav>
   </div>
@@ -167,58 +245,87 @@ footer img{height:70px}
 <section class="hero" id="inicio">
   <div class="wrap grid">
     <div>
-      <p class="eyebrow">Marketing Agency · Estrategia · Contenido · Resultados</p>
-      <h1>Marcas que no solo se ven bien. <em>Se recuerdan, conectan y crecen.</em></h1>
-      <p>Somos una agencia de contenido para marcas que no quieren salir en cámara. Diseñamos tu Instagram para que te descubran, confíen en ti y te escriban por WhatsApp.</p>
+      <p class="eyebrow">Agencia de contenido · Instagram</p>
+      <h1>Tu Instagram vendiendo por WhatsApp. <em>Sin que salgas en cámara.</em></h1>
+      <p class="sub">Creamos carruseles y Reels con tu identidad para que te descubran, confíen en ti y te escriban. Tú te dedicas a tu negocio; nosotras, a que se vea y se sienta como la marca que mereces.</p>
+      <ul class="ticks">
+        <li>Contenido sin rostro: producto, manos, proceso y texto</li>
+        <li>Calendario entregado antes del día 25 o te descontamos 15%</li>
+        <li>Sin permanencia: te quedas porque funciona</li>
+      </ul>
       <div class="actions">
-        <a class="btn wa" href="#contacto">Agenda tu diagnóstico gratis</a>
-        <a class="btn ghost" href="#portafolio">Ver portafolio</a>
+        <a class="btn wa" href="#contacto">Quiero mi diagnóstico gratis →</a>
+        <a class="btn ghost" href="#portafolio">Ver cómo trabajamos</a>
       </div>
-      <div class="keywords"><span>Auténtica</span><span>Estratégica</span><span>Creativa</span><span>Consciente</span></div>
+      <p class="micro">20 minutos · sin compromiso · te mostramos 3 ideas para tu marca</p>
     </div>
-    <div class="art"><img src="assets/pluma.png" alt="Pluma, símbolo de SUMAQ"></div>
+    <div class="phone-wrap">
+      <div class="phone"><div class="screen">
+        <div class="ph-top"><img src="assets/pluma.png" alt=""><div><b>sumaq.agency</b><span>Marketing Agency</span></div></div>
+        <p class="ph-bio">Contenido para marcas que no quieren salir en cámara. Tu Instagram, ordenado para vender.</p>
+        <div class="ph-btn">Escríbenos</div>
+        <div class="ph-grid">
+          <div class="t1">Cómo pedir en 3 pasos</div><div class="t2">Tu marca, sin cara</div><div class="t3">Guarda este calendario</div>
+          <div class="t4">5 errores del feed</div><div class="t5">Proceso real</div><div class="t6">Cupos abiertos</div>
+        </div>
+      </div></div>
+    </div>
   </div>
 </section>
 
-<div class="strip">
+<div class="trust">
   <div class="wrap">
-    <div><strong>Atrae</strong><span>Haz que te descubran</span></div>
-    <div><strong>Conecta</strong><span>Haz que confíen en ti</span></div>
-    <div><strong>Convierte</strong><span>Haz que te elijan</span></div>
+    <div><strong>Sin permanencia</strong>Cancelas con 15 días de aviso</div>
+    <div><strong>Entrega garantizada</strong>Calendario antes del día 25</div>
+    <div><strong>Precios claros</strong>Desde $890.000 al mes</div>
+    <div><strong>Reporte simple</strong>3 números y qué repetir</div>
   </div>
 </div>
 
-<section id="servicios">
+<section id="problema">
+  <div class="wrap center">
+    <p class="eyebrow">¿Te suena familiar?</p>
+    <h2>Publicas, pero no te escriben</h2>
+    <p class="lead">Le pasa a la mayoría de marcas pequeñas. No es falta de esfuerzo: es falta de sistema.</p>
+    <div class="pain rv" style="text-align:left">
+      <div><b>“No sé qué publicar”</b><p>Subes cuando te acuerdas, sin un calendario ni un hilo conductor.</p></div>
+      <div><b>“Mi feed no se ve profesional”</b><p>Cada post se ve distinto y nadie recuerda quién eres.</p></div>
+      <div><b>“No quiero salir en video”</b><p>Y todo el mundo te dice que sin cara no se vende. Eso no es cierto.</p></div>
+    </div>
+    <p class="turn rv">Con un sistema claro, <em>tu marca se recuerda, conecta y vende.</em></p>
+  </div>
+</section>
+
+<section class="alt" id="servicios">
   <div class="wrap">
-    <p class="eyebrow">01 · Servicios</p>
-    <h2>Marketing con intención</h2>
-    <p class="lead">Estrategia, contenido y resultados dentro de un mismo sistema creativo. Sin que tengas que aparecer en cámara.</p>
+    <p class="eyebrow">Qué hacemos</p>
+    <h2>Estrategia, contenido y resultados en un solo sistema</h2>
+    <p class="lead">Atraemos, conectamos y convertimos: del primer vistazo al mensaje en tu WhatsApp.</p>
     <div class="cards3">
-      <div class="card"><span class="n">01</span><h3>Estrategia</h3><p>Ordenamos tu mensaje antes de publicar.</p><ul><li>Posicionamiento</li><li>Identidad visual</li><li>Plan de contenido</li></ul></div>
-      <div class="card"><span class="n">02</span><h3>Contenido</h3><p>Piezas que detienen el scroll y se guardan.</p><ul><li>Carruseles y Reels sin rostro</li><li>Dirección creativa</li><li>Campañas de temporada</li></ul></div>
-      <div class="card"><span class="n">03</span><h3>Resultados</h3><p>Contenido que termina en una conversación.</p><ul><li>CTA a WhatsApp</li><li>Reporte simple mensual</li><li>Optimización continua</li></ul></div>
+      <div class="card rv"><span class="n">01</span><h3>Atrae</h3><p>Haz que te descubran. Contenido que detiene el scroll.</p><ul><li>Reels sin rostro</li><li>Ganchos y direcciones creativas</li><li>Identidad visual coherente</li></ul></div>
+      <div class="card rv"><span class="n">02</span><h3>Conecta</h3><p>Haz que confíen en ti. Contenido que educa y se guarda.</p><ul><li>Carruseles estratégicos</li><li>Historias con plantilla</li><li>Voz de marca consistente</li></ul></div>
+      <div class="card rv"><span class="n">03</span><h3>Convierte</h3><p>Haz que te elijan. Contenido que termina en una conversación.</p><ul><li>CTA a tu WhatsApp o DM</li><li>Campañas de temporada</li><li>Reporte simple mensual</li></ul></div>
     </div>
   </div>
 </section>
 
-<section class="alt" id="portafolio">
+<section id="portafolio">
   <div class="wrap">
-    <p class="eyebrow">02 · Portafolio</p>
-    <h2>Así trabajamos una marca</h2>
-    <p class="lead">Tres proyectos conceptuales que muestran nuestro método de principio a fin, con piezas reales de ejemplo.</p>
-    <div class="notice"><b>Transparencia:</b> estos proyectos son ejercicios creativos con marcas ficticias. No incluyen resultados de clientes. Los casos con cifras reales se publicarán aquí con permiso de nuestras primeras Marcas Fundadoras.</div>
+    <p class="eyebrow">Portafolio</p>
+    <h2>Mira cómo se ve nuestro trabajo</h2>
+    <p class="lead">Tres estudios de marca donde aplicamos nuestro método completo: reto, estrategia y piezas.</p>
+    <div class="notice"><b>Sobre estos estudios:</b> los desarrollamos con marcas de ejemplo para mostrar nuestro método y nivel de diseño. Los resultados con clientes reales los publicaremos aquí, con su autorización, al terminar nuestros primeros proyectos.</div>
 
-    <!-- CASO 1 -->
-    <article class="case">
+    <article class="case rv">
       <div class="case-text">
-        <span class="tag">Proyecto conceptual · marca ficticia</span>
+        <span class="tag">Estudio de marca · Repostería</span>
         <h3>Dulce Brasa</h3>
         <p class="sector">Repostería artesanal por encargo</p>
         <dl>
-          <div><dt>Reto</dt><dd>Un negocio que vende por encargo y su dueña no quiere salir en video. Feed sin identidad y pedidos que dependen de recomendaciones.</dd></div>
+          <div><dt>Reto</dt><dd>Un negocio que vende por encargo y cuya dueña no quiere salir en video. Feed sin identidad y pedidos que dependen de recomendaciones.</dd></div>
           <div><dt>Estrategia</dt><dd>Mostrar el proceso con manos y producto, carruseles que explican cómo pedir y un CTA por palabra clave a WhatsApp.</dd></div>
           <div><dt>Piezas del sistema</dt><dd><div class="chips"><span>Carruseles educativos</span><span>Reels de proceso</span><span>Plantillas de historias</span><span>Menú de pedidos</span></div></dd></div>
-          <div><dt>Qué mediríamos</dt><dd>Mensajes por palabra clave, guardados por carrusel y pedidos atribuidos a Instagram.</dd></div>
+          <div><dt>Cómo se mediría</dt><dd>Mensajes por palabra clave, guardados por carrusel y pedidos atribuidos a Instagram.</dd></div>
         </dl>
       </div>
       <div class="slides">
@@ -228,17 +335,16 @@ footer img{height:70px}
       </div>
     </article>
 
-    <!-- CASO 2 -->
-    <article class="case">
+    <article class="case rv">
       <div class="case-text">
-        <span class="tag">Proyecto conceptual · marca ficticia</span>
+        <span class="tag">Estudio de marca · Plantas y decoración</span>
         <h3>Lienzo Verde</h3>
         <p class="sector">Plantas y macetas decorativas</p>
         <dl>
           <div><dt>Reto</dt><dd>Fotos bonitas pero sin mensaje: seguidores que miran y no compran. Catálogo desordenado.</dd></div>
           <div><dt>Estrategia</dt><dd>Contenido de cuidado de plantas (educa y se guarda), catálogo en WhatsApp Business y un calendario de temporada para Navidad.</dd></div>
           <div><dt>Piezas del sistema</dt><dd><div class="chips"><span>Guías de cuidado</span><span>Reels de unboxing</span><span>Catálogo</span><span>Sprint Navidad</span></div></dd></div>
-          <div><dt>Qué mediríamos</dt><dd>Guardados, consultas al catálogo y ventas de la campaña de Navidad.</dd></div>
+          <div><dt>Cómo se mediría</dt><dd>Guardados, consultas al catálogo y ventas de la campaña de Navidad.</dd></div>
         </dl>
       </div>
       <div class="slides">
@@ -248,54 +354,60 @@ footer img{height:70px}
       </div>
     </article>
 
-    <!-- CASO 3 -->
-    <article class="case">
+    <article class="case rv">
       <div class="case-text">
-        <span class="tag">Proyecto conceptual · marca ficticia</span>
+        <span class="tag">Estudio de marca · Moda artesanal</span>
         <h3>Atelier Hilo</h3>
         <p class="sector">Ropa artesanal en tirajes pequeños</p>
         <dl>
-          <div><dt>Reto</dt><dd>Una marca nueva sin identidad definida y sin una voz clara que la diferencie de las tiendas masivas.</dd></div>
+          <div><dt>Reto</dt><dd>Una marca nueva sin identidad definida ni una voz que la diferencie de las tiendas masivas.</dd></div>
           <div><dt>Estrategia</dt><dd>Mini kit de marca (paleta, tipografías, 6 plantillas), historia del oficio y lanzamientos por cupos con cuenta regresiva.</dd></div>
           <div><dt>Piezas del sistema</dt><dd><div class="chips"><span>Mini kit de marca</span><span>Carruseles de lanzamiento</span><span>Historias con cuenta regresiva</span></div></dd></div>
-          <div><dt>Qué mediríamos</dt><dd>Cupos reservados por lanzamiento y mensajes de preventa.</dd></div>
+          <div><dt>Cómo se mediría</dt><dd>Cupos reservados por lanzamiento y mensajes de preventa.</dd></div>
         </dl>
       </div>
       <div class="slides">
         <div class="slide c1"><span class="dot"></span><span class="k">Nueva colección</span><span class="t">Hecho a mano, en cupos</span><span class="f">ATELIER HILO</span></div>
         <div class="slide c2"><span class="dot"></span><span class="k">Proceso</span><span class="t">Cada prenda, un oficio</span><span class="f">ATELIER HILO</span></div>
-        <div class="slide c3"><span class="dot"></span><span class="k">Quedan 12</span><span class="t">Reserva por DM</span><span class="f">ATELIER HILO</span></div>
+        <div class="slide c3"><span class="dot"></span><span class="k">Cupos</span><span class="t">Reserva por DM</span><span class="f">ATELIER HILO</span></div>
       </div>
     </article>
-  </div>
-</section>
 
-<section id="proceso">
-  <div class="wrap">
-    <p class="eyebrow">03 · Proceso</p>
-    <h2>Escuchamos, entendemos y creamos</h2>
-    <div class="steps">
-      <div class="step"><b>Analizamos</b><p>Diagnóstico de 20 minutos de tu negocio y tu Instagram.</p></div>
-      <div class="step"><b>Ideamos</b><p>Pilares de contenido y calendario del mes.</p></div>
-      <div class="step"><b>Creamos</b><p>Piezas con tu identidad, listas antes del día 25.</p></div>
-      <div class="step"><b>Conectamos</b><p>Reporte de una página con 3 números y qué repetir.</p></div>
+    <div class="case-cta rv">
+      <p class="turn" style="margin:0 0 20px">¿Te imaginas esto con <em>tu marca</em>?</p>
+      <a class="btn wa" href="#contacto">Quiero mi diagnóstico gratis →</a>
     </div>
   </div>
 </section>
 
-<section class="alt" id="planes">
+<section class="alt" id="proceso">
+  <div class="wrap center">
+    <p class="eyebrow">Empezar es fácil</p>
+    <h2>Qué pasa cuando nos escribes</h2>
+    <p class="lead">Tres pasos, sin letra pequeña. Sabrás exactamente qué sigue en cada uno.</p>
+    <div class="steps rv" style="text-align:left">
+      <div class="step"><i>1</i><b>Nos escribes</b><p>Por DM o WhatsApp, en horario hábil. Agendamos 20 minutos contigo.</p></div>
+      <div class="step"><i>2</i><b>Diagnóstico gratis</b><p>Revisamos tu Instagram en pantalla compartida y te mostramos 3 mejoras concretas.</p></div>
+      <div class="step"><i>3</i><b>Tú decides</b><p>Si te convence, eliges un plan. Si no, te quedas con las ideas, sin compromiso.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="planes">
   <div class="wrap">
-    <p class="eyebrow">04 · Planes</p>
-    <h2>Precios claros, sin permanencia</h2>
-    <p class="lead">Elige según el tamaño de tu marca. Cambias o cancelas con 15 días de aviso.</p>
+    <div class="center">
+      <p class="eyebrow">Planes</p>
+      <h2>Precios claros, sin permanencia</h2>
+      <p class="lead">Elige según el tamaño de tu marca. Cambias o cancelas con 15 días de aviso.</p>
+    </div>
     <div class="plans">
-      <div class="plan"><h3>Semilla</h3><div class="price">$890.000<small> /mes</small></div>
+      <div class="plan rv"><h3>Semilla</h3><p class="for">Para empezar con orden</p><div class="price">$890.000<small> /mes</small></div><div class="hours">≈ 20 horas de trabajo creativo</div>
         <ul><li>8 piezas al mes (carruseles y Reels sin rostro)</li><li>8 historias con plantilla</li><li>Calendario de contenido</li><li>Reporte mensual</li></ul>
         <a class="btn ghost wa" href="#contacto">Quiero Semilla</a></div>
-      <div class="plan pop"><h3>Crece</h3><div class="price">$1.490.000<small> /mes</small></div>
+      <div class="plan pop rv"><h3>Crece</h3><p class="for">Para que Instagram te traiga mensajes</p><div class="price">$1.490.000<small> /mes</small></div><div class="hours">≈ 28 horas de trabajo creativo</div>
         <ul><li>12 piezas al mes</li><li>12 historias con plantilla</li><li>CTA a WhatsApp + WhatsApp Business configurado</li><li>Calendario y reporte mensual</li></ul>
         <a class="btn wa" href="#contacto">Quiero Crece</a></div>
-      <div class="plan"><h3>Impulsa</h3><div class="price">$2.490.000<small> /mes</small></div>
+      <div class="plan rv"><h3>Impulsa</h3><p class="for">Para marcas listas para acelerar</p><div class="price">$2.490.000<small> /mes</small></div><div class="hours">≈ 48 horas de trabajo creativo</div>
         <ul><li>20 piezas al mes</li><li>Sesión mensual de guion de grabación</li><li>1 campaña mensual y estrategia de pauta</li><li>Reporte y llamada de seguimiento</li></ul>
         <a class="btn ghost wa" href="#contacto">Quiero Impulsa</a></div>
     </div>
@@ -303,13 +415,58 @@ footer img{height:70px}
   </div>
 </section>
 
+<section class="alt" id="garantias">
+  <div class="wrap center">
+    <p class="eyebrow">Tu tranquilidad</p>
+    <h2>Trabajar con nosotras no es un riesgo</h2>
+    <div class="g4 rv">
+      <div><span class="ic">✦</span><b>Sin permanencia</b><p>Te quedas mientras te sirva.</p></div>
+      <div><span class="ic">✦</span><b>Entrega a tiempo</b><p>Calendario antes del día 25 o 15% de descuento.</p></div>
+      <div><span class="ic">✦</span><b>2 rondas de cambios</b><p>Ajustamos cada pieza contigo.</p></div>
+      <div><span class="ic">✦</span><b>Tu marca es tuya</b><p>Las piezas pagadas son de tu negocio.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="para-quien">
+  <div class="wrap">
+    <div class="center"><p class="eyebrow">¿Es para ti?</p><h2>Trabajamos mejor con estas marcas</h2></div>
+    <div class="fit rv">
+      <div class="yes"><h3>Sí, escríbenos si…</h3><ul>
+        <li>Vendes por WhatsApp o DM y quieres más mensajes</li>
+        <li>Tu negocio ya existe y tienes un producto o servicio claro</li>
+        <li>Prefieres que tu contenido no dependa de salir en cámara</li>
+        <li>Quieres constancia sin tener que pensar qué publicar</li></ul></div>
+      <div class="no"><h3>Quizá no todavía si…</h3><ul>
+        <li>Buscas resultados garantizados en una semana</li>
+        <li>Aún no tienes producto o servicio definido</li>
+        <li>Tu presupuesto mensual es menor a $890.000</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="faq">
+  <div class="wrap">
+    <div class="center"><p class="eyebrow">Preguntas frecuentes</p><h2>Antes de escribirnos</h2></div>
+    <div class="faq">
+      <details><summary>¿De verdad se puede vender sin salir en cámara?</summary><p>Sí. Usamos producto, manos, proceso, capturas de pantalla, texto en movimiento y voz en off. Lo importante es que el contenido sea claro, constante y tenga un siguiente paso.</p></details>
+      <details><summary>¿Cuánto tarda en verse un resultado?</summary><p>Depende de tu punto de partida. En las primeras 2 a 4 semanas ordenamos tu perfil y tu contenido; los mensajes y las ventas se miden mes a mes en el reporte. No prometemos cifras exactas: te mostramos lo que pasa con datos reales.</p></details>
+      <details><summary>¿Qué necesito para empezar?</summary><p>Acceso a tu Instagram (administración compartida), tus logos o colores si ya los tienes y una conversación inicial de 20 minutos. Nosotras armamos el resto.</p></details>
+      <details><summary>¿Puedo cancelar cuando quiera?</summary><p>Sí. No hay permanencia: avisas con 15 días y listo. El mes pagado por adelantado no se devuelve.</p></details>
+      <details><summary>¿La pauta está incluida?</summary><p>La estrategia de pauta sí está en el plan Impulsa. La inversión en publicidad la pagas tú directamente a Meta, para que tengas control total de tu dinero.</p></details>
+      <details><summary>¿Qué incluye el diagnóstico gratis?</summary><p>Una llamada o videollamada de 20 minutos: revisamos tu Instagram, entendemos cómo vendes y te damos 3 mejoras concretas. Es tuyo aunque no contrates.</p></details>
+    </div>
+  </div>
+</section>
+
 <section id="contacto">
   <div class="wrap">
-    <div class="cta">
+    <div class="cta rv">
       <p class="eyebrow">Marcas Fundadoras · 10 cupos</p>
       <h2>Sé una de nuestras primeras marcas</h2>
-      <p>Setup de marca gratis y precio congelado por 6 meses al pagar el trimestre. Cuéntanos de tu negocio y te mostramos 3 ideas en un diagnóstico de 20 minutos.</p>
-      <a class="btn wa" id="wa-main" href="#contacto">Escríbenos por WhatsApp</a>
+      <p>Las primeras 10 marcas tienen setup de marca gratis y el precio congelado por 6 meses al pagar el trimestre. Cuéntanos de tu negocio y te mostramos 3 ideas en 20 minutos.</p>
+      <a class="btn wa" id="wa-main" href="#contacto">Quiero mi diagnóstico gratis →</a>
+      <p class="micro">Sin compromiso · Te respondemos en horario hábil</p>
     </div>
   </div>
 </section>
@@ -327,16 +484,47 @@ footer img{height:70px}
   </div>
 </footer>
 
+<div class="sticky" id="sticky"><a class="btn wa" href="#contacto">Diagnóstico gratis de 20 min →</a></div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Diagnóstico gratis">
+  <div class="box">
+    <button class="x" aria-label="Cerrar" onclick="closeModal()">×</button>
+    <p class="eyebrow">Antes de irte</p>
+    <h3>Llévate 3 ideas para tu Instagram</h3>
+    <p>En 20 minutos revisamos tu perfil y te mostramos 3 mejoras concretas. Es gratis y sin compromiso.</p>
+    <a class="btn wa" href="#contacto" onclick="closeModal()">Quiero mis 3 ideas →</a>
+  </div>
+</div>
+
 <script>
   // EDITA AQUÍ: número con indicativo de país, sin + ni espacios (ej. 573001234567)
   const CONFIG = { whatsapp: "57XXXXXXXXXX", mensaje: "Hola SUMAQ, quiero agendar mi diagnóstico gratuito." };
-  // Mientras no haya WhatsApp, los botones abren el DM de Instagram.
   const sinWhatsapp = /X/.test(CONFIG.whatsapp);
   const url = sinWhatsapp
     ? "https://ig.me/m/sumaq.agency"
     : "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(CONFIG.mensaje);
   document.querySelectorAll("a.wa").forEach(a => { a.href = url; a.target = "_blank"; a.rel = "noopener"; });
-  document.getElementById("wa-main").textContent = sinWhatsapp ? "Escríbenos por Instagram" : "Escríbenos por WhatsApp";
+
+  // aparición suave al hacer scroll
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .12 });
+  document.querySelectorAll(".rv").forEach(el => io.observe(el));
+
+  // botón fijo en móvil: aparece después del hero
+  const sticky = document.getElementById("sticky");
+  addEventListener("scroll", () => sticky.classList.toggle("show", scrollY > 500), { passive: true });
+
+  // ventana de salida (solo escritorio, una vez por visita)
+  const modal = document.getElementById("modal");
+  function closeModal(){ modal.classList.remove("open"); }
+  function seen(){ try { return sessionStorage.getItem("sumaq-exit"); } catch (e) { return "1"; } }
+  document.addEventListener("mouseleave", e => {
+    if (e.clientY <= 0 && !seen() && innerWidth > 900 && scrollY > 800) {
+      modal.classList.add("open");
+      try { sessionStorage.setItem("sumaq-exit", "1"); } catch (e) {}
+    }
+  });
+  modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+  addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
 </script>
 </body>
 </html>
